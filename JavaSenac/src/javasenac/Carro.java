@@ -14,7 +14,22 @@ public class Carro extends javax.swing.JPanel {
      * Creates new form Carro
      */
     public Carro() {
-        initComponents();
+     
+       initComponents();
+       
+       abastecer.setEnabled(false);
+       ligar.setEnabled(false);
+       acelerar.setEnabled(false);
+       freiar.setEnabled(false);
+       desligar.setEnabled(false);
+       
+       
+       
+       
+       
+       
+       
+       
     }
 
     /**
@@ -26,19 +41,112 @@ public class Carro extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bntAbastecer = new javax.swing.JButton();
+        btnLigar = new javax.swing.JButton();
+        btnAcelerar = new javax.swing.JButton();
+        btnFreiar = new javax.swing.JButton();
+        btnDesligar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        list = new javax.swing.JTextArea();
+        abastecer = new javax.swing.JTextField();
+        ligar = new javax.swing.JTextField();
+        acelerar = new javax.swing.JTextField();
+        freiar = new javax.swing.JTextField();
+        desligar = new javax.swing.JTextField();
+
+        bntAbastecer.setText("Abastecer");
+
+        btnLigar.setText("ligarCarro");
+
+        btnAcelerar.setText("acelerar");
+
+        btnFreiar.setText("freiar");
+
+        btnDesligar.setText("desligarCarro");
+
+        list.setColumns(20);
+        list.setRows(5);
+        jScrollPane1.setViewportView(list);
+
+        desligar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                desligarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnDesligar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bntAbastecer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnLigar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAcelerar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnFreiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(58, 58, 58)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(abastecer)
+                    .addComponent(ligar)
+                    .addComponent(acelerar)
+                    .addComponent(freiar)
+                    .addComponent(desligar, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE))
+                .addGap(166, 166, 166)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(545, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bntAbastecer)
+                    .addComponent(abastecer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnLigar)
+                            .addComponent(ligar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(acelerar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAcelerar))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(freiar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnFreiar)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(desligar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDesligar))
+                .addContainerGap(253, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void desligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desligarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_desligarActionPerformed
+
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField abastecer;
+    private javax.swing.JTextField acelerar;
+    private javax.swing.JButton bntAbastecer;
+    private javax.swing.JButton btnAcelerar;
+    private javax.swing.JButton btnDesligar;
+    private javax.swing.JButton btnFreiar;
+    private javax.swing.JButton btnLigar;
+    private javax.swing.JTextField desligar;
+    private javax.swing.JTextField freiar;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField ligar;
+    private javax.swing.JTextArea list;
     // End of variables declaration//GEN-END:variables
 }
