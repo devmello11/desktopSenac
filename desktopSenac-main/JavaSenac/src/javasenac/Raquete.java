@@ -11,36 +11,41 @@ import javax.swing.JOptionPane;
  * @author Robert51816586
  */
 public class Raquete extends javax.swing.JFrame {
-int bat = 0;
+
+    int bat = 0;
+
     /**
      * Creates new form Raquete
      */
     public Raquete() {
         initComponents();
-        
+
         carregar.setEnabled(false);
         ligar.setEnabled(false);
         usar.setEnabled(false);
         result.setEnabled(false);
-        
-        carregar.setText(bat+" % Bateria");
-        usar.setText(bat+" % Bateria");
+
+        carregar.setText(bat + " % Bateria");
+        usar.setText(bat + " % Bateria");
         ligar.setText("Desligado");
-        
+
         atualizarResult();
         resetarResult();
-        
+
     }
-    public void atualizarResult(){
-        result.setText("Bateria :"+carregar.getText()
-                +"\n"+ "Usar: "+usar.getText()
-                +"\n"+"Ligar: "+ligar.getText());
+
+    public void atualizarResult() {
+        result.setText("Bateria :" + carregar.getText()
+                + "\n" + "Usar: " + usar.getText()
+                + "\n" + "Ligar: " + ligar.getText());
     }
-    public void resetarResult(){
-        carregar.setText(bat+" % Bateria");
-        usar.setText(bat+" % Bateria");
+
+    public void resetarResult() {
+        carregar.setText(bat + " % Bateria");
+        usar.setText(bat + " % Bateria");
         ligar.setText("Desligado");
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -133,47 +138,46 @@ int bat = 0;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCarregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCarregarMouseClicked
-        bat =  bat+100;
+        bat = bat + 100;
         btnCarregar.getText();
-        
-        
-        if(bat>100){
-            JOptionPane.showMessageDialog(null,"Bateria carregada");
+
+        if (bat > 100) {
+            JOptionPane.showMessageDialog(null, "Bateria carregada");
             bat = 100;
-            carregar.setText(bat+"% Bateria");
-            usar.setText(bat+"% Bateria");
+            carregar.setText(bat + "% Bateria");
+            usar.setText(bat + "% Bateria");
         }
-        carregar.setText(bat+"% Bateria");
-        usar.setText(bat+"% Bateria");
+        carregar.setText(bat + "% Bateria");
+        usar.setText(bat + "% Bateria");
         atualizarResult();
     }//GEN-LAST:event_btnCarregarMouseClicked
 
     private void btnLigarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLigarMouseClicked
-        if(bat == 100){
-         btnLigar.getText();
-             ligar.setText("Raquete ligada");
-        }else{
+        if (bat == 100) {
+            btnLigar.getText();
+            ligar.setText("Raquete ligada");
+        } else {
             JOptionPane.showMessageDialog(null, "Carregue bateria 100% para ligar");
         }
         atualizarResult();
     }//GEN-LAST:event_btnLigarMouseClicked
 
     private void btnUsarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUsarMouseClicked
-        if(bat>00 && ligar.getText().equals("Raquete ligada")){
-            bat = bat-10;
+        if (bat > 00 && ligar.getText().equals("Raquete ligada")) {
+            bat = bat - 10;
             btnUsar.getText();
-            usar.setText(bat+"% Bateria");
-            carregar.setText(bat+"% Bateria");
+            usar.setText(bat + "% Bateria");
+            carregar.setText(bat + "% Bateria");
             atualizarResult();
-            if(bat==0){
-              JOptionPane.showMessageDialog(null,"Bateria Maquina Desligada");
-              resetarResult();
+            if (bat == 0) {
+                JOptionPane.showMessageDialog(null, "Bateria Maquina Desligada");
+                resetarResult();
             }
-        }else{
-            JOptionPane.showMessageDialog(null,"Bateria Maquina Desligada");
-            
+        } else {
+            JOptionPane.showMessageDialog(null, "Bateria Maquina Desligada");
+
         }
-        
+
     }//GEN-LAST:event_btnUsarMouseClicked
 
     /**
