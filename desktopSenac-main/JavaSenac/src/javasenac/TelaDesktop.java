@@ -27,13 +27,32 @@ public class TelaDesktop extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuBar3 = new javax.swing.JMenuBar();
+        jMenu4 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
         painel = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         cadastro = new javax.swing.JMenu();
         menuItem = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        vendas = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
+
+        jMenu2.setText("File");
+        jMenuBar2.add(jMenu2);
+
+        jMenu3.setText("Edit");
+        jMenuBar2.add(jMenu3);
+
+        jMenu4.setText("File");
+        jMenuBar3.add(jMenu4);
+
+        jMenu5.setText("Edit");
+        jMenuBar3.add(jMenu5);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,7 +69,7 @@ public class TelaDesktop extends javax.swing.JFrame {
 
         cadastro.setText("Cadastro pessoas");
 
-        menuItem.setText("jMenuItem2");
+        menuItem.setText("Cadastro pessoas");
         menuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuItemActionPerformed(evt);
@@ -60,8 +79,22 @@ public class TelaDesktop extends javax.swing.JFrame {
 
         jMenuBar1.add(cadastro);
 
-        jMenu2.setText("Listas");
-        jMenuBar1.add(jMenu2);
+        vendas.setText("Vendas");
+        vendas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                vendasActionPerformed(evt);
+            }
+        });
+
+        jMenuItem2.setText("Cadastrar Vendas");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        vendas.add(jMenuItem2);
+
+        jMenuBar1.add(vendas);
 
         setJMenuBar(jMenuBar1);
 
@@ -88,7 +121,18 @@ public class TelaDesktop extends javax.swing.JFrame {
         CadastroPessoa cp = new CadastroPessoa();
         painel.add(cp);
         cp.setVisible(true);
+        
     }//GEN-LAST:event_menuItemActionPerformed
+
+    private void vendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vendasActionPerformed
+       
+    }//GEN-LAST:event_vendasActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        Vendas venda = new Vendas();
+        painel.add(venda);
+        venda.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,9 +172,16 @@ public class TelaDesktop extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu cadastro;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem menuItem;
     private javax.swing.JDesktopPane painel;
+    private javax.swing.JMenu vendas;
     // End of variables declaration//GEN-END:variables
 }
