@@ -33,12 +33,17 @@ public class TelaDesktop extends javax.swing.JFrame {
         jMenuBar3 = new javax.swing.JMenuBar();
         jMenu4 = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
+        jMenuBar4 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu6 = new javax.swing.JMenu();
         painel = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         cadastro = new javax.swing.JMenu();
         menuItem = new javax.swing.JMenuItem();
         vendas = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        calendar = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -53,6 +58,12 @@ public class TelaDesktop extends javax.swing.JFrame {
 
         jMenu5.setText("Edit");
         jMenuBar3.add(jMenu5);
+
+        jMenu1.setText("File");
+        jMenuBar4.add(jMenu1);
+
+        jMenu6.setText("Edit");
+        jMenuBar4.add(jMenu6);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -96,6 +107,23 @@ public class TelaDesktop extends javax.swing.JFrame {
 
         jMenuBar1.add(vendas);
 
+        jMenu7.setText("Cadastro completo");
+
+        calendar.setText("cadastro");
+        calendar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                calendarMouseClicked(evt);
+            }
+        });
+        calendar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calendarActionPerformed(evt);
+            }
+        });
+        jMenu7.add(calendar);
+
+        jMenuBar1.add(jMenu7);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -134,6 +162,16 @@ public class TelaDesktop extends javax.swing.JFrame {
         venda.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void calendarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_calendarMouseClicked
+     
+    }//GEN-LAST:event_calendarMouseClicked
+
+    private void calendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calendarActionPerformed
+            CadastroCalendar calendario = new CadastroCalendar();
+       painel.add(calendario);
+       calendario.setVisible(true);
+    }//GEN-LAST:event_calendarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -171,13 +209,18 @@ public class TelaDesktop extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu cadastro;
+    private javax.swing.JMenuItem calendar;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBar3;
+    private javax.swing.JMenuBar jMenuBar4;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem menuItem;

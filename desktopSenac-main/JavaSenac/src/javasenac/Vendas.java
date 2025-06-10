@@ -44,6 +44,11 @@ public void calcular(){
         preco = new javax.swing.JTextField();
         btnCadastro = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+
         tabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
