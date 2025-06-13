@@ -50,10 +50,11 @@ public class CadastroMySql extends javax.swing.JInternalFrame {
                 Object[] dados = {
                     rs.getString("id_pessoa"),
                     rs.getString("nome"),
-                    rs.getString("cpf"),
-                    rs.getString("email"),
-                    rs.getString("telefone"),
-                    rs.getString("situacao")
+                    rs.getString("cpf_cnpj"),
+                    
+                    
+                    rs.getString("situacao"),
+                    rs.getString("idade")
                 };
                 tabelaResultado.addRow(dados); // Adiciona a linha na tabela
             }
@@ -124,11 +125,11 @@ public class CadastroMySql extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "aluno", "curso", "endereço", "pessoa", "professor", "turma"
+                "id", "nome", "cpf/cnpj", "situacao", "idade"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {

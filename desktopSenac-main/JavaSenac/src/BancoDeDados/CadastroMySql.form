@@ -174,13 +174,12 @@
         <Component class="javax.swing.JTable" name="tabela">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="6" rowCount="0">
-                <Column editable="false" title="aluno" type="java.lang.Object"/>
-                <Column editable="false" title="curso" type="java.lang.Object"/>
-                <Column editable="false" title="endere&#xe7;o" type="java.lang.Object"/>
-                <Column editable="false" title="pessoa" type="java.lang.Object"/>
-                <Column editable="false" title="professor" type="java.lang.Object"/>
-                <Column editable="false" title="turma" type="java.lang.Object"/>
+              <Table columnCount="5" rowCount="0">
+                <Column editable="false" title="id" type="java.lang.Object"/>
+                <Column editable="false" title="nome" type="java.lang.Object"/>
+                <Column editable="false" title="cpf/cnpj" type="java.lang.Object"/>
+                <Column editable="false" title="situacao" type="java.lang.Object"/>
+                <Column editable="false" title="idade" type="java.lang.Object"/>
               </Table>
             </Property>
           </Properties>
